@@ -1,9 +1,9 @@
 import React from "react"
 import { Container, Row } from "reactstrap"
 import { Helmet } from "react-helmet"
+import { FaReact, FaPlayCircle, FaCss3, FaJs } from "react-icons/fa"
 import Card from "../components/Card"
 import Footer from "../components/Footer"
-import { FaReact, FaPlayCircle, FaCss3, FaJs } from "react-icons/fa"
 import "availity-uikit"
 import "./index.scss"
 
@@ -30,7 +30,7 @@ const IndexPage = () => (
           icon={<FaPlayCircle size="2em" />}
           className="bg-secondary"
           link="https://github.com/Availity/availity-workflow"
-          description="Get started by following our intuitive CRA workflow to kick start your project."
+          description="Get started with our toolkit for web application development."
         />
         <Card
           name="UI Kit"
@@ -44,7 +44,7 @@ const IndexPage = () => (
           icon={<FaReact size="2em" />}
           className="bg-primary"
           link="https://availity.github.io/availity-react/"
-          description="React components using Availity UIKit and Bootstrap 4."
+          description="React components built with Availity UI Kit and Reactstrap."
         />
         <Card
           name="SDK"

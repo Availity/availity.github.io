@@ -43,7 +43,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "deploy": "npm run build && gh-pages -d public -b gh-pages",
+    "deploy": "npm run build && gh-pages -d public -b master",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },

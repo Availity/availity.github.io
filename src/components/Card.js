@@ -1,15 +1,18 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Col, Card as RCard, CardTitle } from "reactstrap"
-import AppIcon from "@availity/app-icon"
+import React from "react";
+import PropTypes from "prop-types";
+import { Col, Card as RCard, CardTitle } from "reactstrap";
+import AppIcon from "@availity/app-icon";
 
-const Card = ({ name, icon, description, className, link, ...rest }) => (
+const Card = ({ name, icon, description, className, to, ...rest }) => (
   <Col xs={12} md={6} lg={6} xl={3} className="d-flex flex-fill">
     <RCard
       body
       tag="a"
       role="link"
-      href={link}
+      style={{
+        textDecoration: "none"
+      }}
+      href={`https://availity.github.io${to}`}
       aria-label={name}
       className={`mb-3 d-flex flex-column align-items-center text-white text-center no-underline ${className}`}
       {...rest}
@@ -27,14 +30,14 @@ const Card = ({ name, icon, description, className, link, ...rest }) => (
       <span className="mb-0 mt-1">{description}</span>
     </RCard>
   </Col>
-)
+);
 
 Card.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
   icon: PropTypes.node,
   className: PropTypes.string,
-  link: PropTypes.string,
-}
+  to: PropTypes.string
+};
 
-export default Card
+export default Card;

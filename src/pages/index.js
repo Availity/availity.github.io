@@ -56,7 +56,8 @@ const IndexPage = ({ location }) => {
           <Layout role="main">
             <TopNavigation
               pathname={location.pathname}
-              className="pl-4"
+              className="pl-0"
+              brandAttrs={{ className: "pl-4" }}
               navItems={generateNavItems(
                 "https://availity.github.io",
                 navConfig

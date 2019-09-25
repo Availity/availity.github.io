@@ -12,10 +12,6 @@ const navConfig = {
     text: "Getting Started",
     matchRegex: "^/availity-workflow"
   },
-  "/availity-uikit": {
-    text: "UI Kit",
-    matchRegex: "^/availity-uikit"
-  },
   "/availity-react": {
     text: "Components",
     matchRegex: "^/availity-react"
@@ -56,6 +52,7 @@ const IndexPage = ({ location }) => {
           <Layout role="main">
             <TopNavigation
               pathname={location.pathname}
+              baseUrl="https://availity.github.io"
               className="pl-0"
               brandAttrs={{ className: "pl-4" }}
               navItems={generateNavItems(

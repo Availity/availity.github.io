@@ -6,6 +6,7 @@ module.exports = {
       "Healthcare can be complicated, but building web applications shouldn't be."
   },
   plugins: [
+    "gatsby-plugin-sass",
     {
       resolve: "@availity/gatsby-theme-core",
       options: {

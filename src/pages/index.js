@@ -6,6 +6,7 @@ import { StaticQuery, graphql } from "gatsby";
 import { FaReact, FaPlayCircle, FaCss3, FaJs } from "react-icons/fa";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
+import "./index.scss";
 
 const navConfig = {
   "/availity-workflow": {

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Avality Docs",
+    title: "Availity Docs",
     // subtitle: "",
     description:
       "Healthcare can be complicated, but building web applications shouldn't be."

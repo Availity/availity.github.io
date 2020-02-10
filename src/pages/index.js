@@ -53,7 +53,7 @@ const IndexPage = ({ location }) => {
             <TopNavigation
               pathname={location.pathname}
               baseUrl="https://availity.github.io"
-              className="pl-0"
+              className="pl-0 border-bottom-0"
               brandAttrs={{ className: "pl-4" }}
               navItems={generateNavItems(
                 "https://availity.github.io",

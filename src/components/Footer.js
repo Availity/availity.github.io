@@ -1,11 +1,9 @@
-import React from 'react';
-import moment from 'moment';
-
-const year = moment().format('YYYY');
+import React from "react";
 
 const Footer = () => (
   <p className="text-center mt-3">
-    Made with <i className="icon icon-heart text-danger" /> by <a href="http://www.availity.com">Availity</a> {year}
+    Made with <i className="icon icon-heart text-danger" /> by{" "}
+    <a href="http://www.availity.com">Availity</a> 2019
   </p>
 );
 

@@ -48,50 +48,49 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Availity React',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
+              label: 'Documentation',
+              href: 'https://availity.github.io/availity-react',
+              target: '_self',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
+              label: 'Github Repository',
+              href: 'https://github.com/availity/availity-react',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Availity SDK-JS',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Documentation',
+              href: 'https://availity.github.io/sdk-js',
+              target: '_self',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Github Repository',
+              href: 'https://github.com/availity/sdk-js',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Availity Workflow',
           items: [
             {
-              label: 'Blog',
-              to: 'blog',
+              label: 'Documentation',
+              href: 'https://availity.github.io/availity-workflow',
+              target: '_self',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Github Repository',
+              href: 'https://github.com/availity/availity-workflow',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Made with ❤️ by Availity.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Made with ❤️ by Availity`,
     },
   },
   presets: [

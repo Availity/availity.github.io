@@ -9,6 +9,12 @@ module.exports = {
   organizationName: 'availity',
   projectName: 'availity.github.io',
   themeConfig: {
+    colorMode: {
+      defaultMode: 'light',
+      // Should we use the prefers-color-scheme media-query,
+      // using user system preferences, instead of the hardcoded defaultMode
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: 'Availity Docs',
       logo: {

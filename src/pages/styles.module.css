@@ -5,11 +5,14 @@
  * and scoped locally.
  */
 
+/* TODO: update heroBanner colors for Availity */
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  /* --ifm-hero-background-color: var(--ifm-color-primary-light);
+  --ifm-hero-text-color: var(--ifm-font-color-base-inverse); */
 }
 
 @media screen and (max-width: 966px) {
@@ -34,4 +37,13 @@
 .featureImage {
   height: 200px;
   width: 200px;
+}
+
+/* Overrides for default <a /> styles */
+.featureLink {
+  color:var(--ifm-color-primary-light)
+}
+
+.reactIcon {
+  color: rgb(97, 219, 251)
 }

@@ -10,23 +10,37 @@ module.exports = {
   projectName: 'availity.github.io',
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'Availity Docs',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Availity Docs Logo',
+        src: 'img/icon.png',
+        href: '/', // https://availity.github.io
+        target: '_self',
       },
       items: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          position: 'left',
-        },
-        {to: 'blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://availity.github.io/availity-react',
+          target: '_self',
+          label: 'React',
           position: 'right',
+        },
+        {
+          href: 'https://availity.github.io/sdk-js',
+          target: '_self',
+          label: 'SDK-JS',
+          position: 'right',
+        },
+        {
+          href: 'availity.github.io/availity-workflow',
+          target: '_self',
+          label: 'Workflow',
+          position: 'right',
+        },
+        {
+          href: 'https://github.com/availity/availity.github.io',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
@@ -86,8 +100,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/availity/availity.github.io/edit/master/',
+          editUrl: 'https://github.com/availity/availity.github.io/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

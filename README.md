@@ -9,10 +9,8 @@ $ yarn install
 $ yarn start
 ```
 
-// TODO: migrate old docs to new dir
 // TODO: migrate circleci to github actions
 // TODO: node 14
-// TODO: change moment to dayjs
 // TODO: Contributing ?
 
 ## Website

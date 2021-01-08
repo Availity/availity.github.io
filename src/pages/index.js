@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 const features = [
@@ -46,9 +45,9 @@ function Feature({ title, description, icon: Icon, href, target }) {
   return (
     <div className={clsx('col col--6', styles.feature)}>
       {Icon && (
-        <a href={href} target={target}>
+        <a href={href} target={target} aria-label={title}>
           <div className="text--center">
-            <Icon className={styles.featureImage} alt={title} a={href} target={target} />
+            <Icon className={styles.featureImage} alt={title} />
           </div>
         </a>
       )}
@@ -70,7 +69,8 @@ function Home() {
           <div className={styles.buttons}>
             <Link
               className={clsx('button button--outline button--secondary button--lg', styles.getStarted)}
-              to={useBaseUrl('docs/')}
+              href="https://availity.github.io/availity-workflow"
+              target="_self"
             >
               Get Started
             </Link>

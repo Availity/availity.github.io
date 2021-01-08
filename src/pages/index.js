@@ -45,11 +45,11 @@ function Feature({ title, description, icon: Icon, href, target }) {
   return (
     <div className={clsx('col col--6', styles.feature)}>
       {Icon && (
-        <a href={href} target={target} aria-label={title}>
+        <Link href={href} target={target} aria-label={title}>
           <div className="text--center">
             <Icon className={styles.featureImage} alt={title} />
           </div>
-        </a>
+        </Link>
       )}
       <h3>{title}</h3>
       <p>{description}</p>

@@ -1,1 +1,12 @@
 extends: availity/browser
+rules:
+  # https://github.com/facebook/docusaurus/blob/v2.0.0-alpha.70/.eslintrc.js#L46-L50
+  import/no-unresolved:
+    - 2 # error
+    - ignore:
+      - '^@theme'
+      - '^@docusaurus'
+      - '^@generated'
+  react/prop-types: 0 # off
+  # https://github.com/facebook/docusaurus/blob/v2.0.0-alpha.70/.eslintrc.js#L73
+  react/no-array-index-key: 0 # off

@@ -1,116 +1,97 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Layout, TopNavigation } from "@availity/gatsby-theme-core";
-import { Container, Row, Col, Alert } from "reactstrap";
-import { StaticQuery, graphql } from "gatsby";
-import { FaReact, FaPlayCircle, FaCss3, FaJs } from "react-icons/fa";
-import Card from "../components/Card";
-import Footer from "../components/Footer";
-import "./index.scss";
+import React from 'react';
+import clsx from 'clsx';
+import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import styles from './styles.module.css';
 
-const navConfig = {
-  "/availity-workflow": {
-    text: "Getting Started",
-    matchRegex: "^/availity-workflow"
+const features = [
+  {
+    title: 'Easy to Use',
+    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    description: (
+      <>
+        Docusaurus was designed from the ground up to be easily installed and
+        used to get your website up and running quickly.
+      </>
+    ),
   },
-  "/availity-react": {
-    text: "Components",
-    matchRegex: "^/availity-react"
+  {
+    title: 'Focus on What Matters',
+    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    description: (
+      <>
+        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
+        ahead and move your docs into the <code>docs</code> directory.
+      </>
+    ),
   },
-  "/sdk-js": {
-    text: "Resources",
-    matchRegex: "^/sdk-js"
-  }
-};
+  {
+    title: 'Powered by React',
+    imageUrl: 'img/undraw_docusaurus_react.svg',
+    description: (
+      <>
+        Extend or customize your website layout by reusing React. Docusaurus can
+        be extended while reusing the same header and footer.
+      </>
+    ),
+  },
+];
 
-function generateNavItems(baseUrl, config) {
-  return Object.entries(config).map(([value, { text, matchRegex }]) => ({
-    text,
-    value: value.startsWith("/") ? baseUrl + value : value,
-    matchRegex
-  }));
+function Feature({imageUrl, title, description}) {
+  const imgUrl = useBaseUrl(imageUrl);
+  return (
+    <div className={clsx('col col--4', styles.feature)}>
+      {imgUrl && (
+        <div className="text--center">
+          <img className={styles.featureImage} src={imgUrl} alt={title} />
+        </div>
+      )}
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>
+  );
 }
 
-const IndexPage = ({ location }) => {
+function Home() {
+  const context = useDocusaurusContext();
+  const {siteConfig = {}} = context;
   return (
-    <StaticQuery
-      query={graphql`
-        {
-          site {
-            siteMetadata {
-              title
-              description
-            }
-          }
-        }
-      `}
-      render={({
-        site: {
-          siteMetadata: { description, title }
-        }
-      }) => {
-        return (
-          <Layout role="main">
-            <TopNavigation
-              pathname={location.pathname}
-              baseUrl="https://availity.github.io"
-              className="pl-0 border-bottom-0"
-              brandAttrs={{ className: "pl-4" }}
-              navItems={generateNavItems(
-                "https://availity.github.io",
-                navConfig
+    <Layout
+      title={`Hello from ${siteConfig.title}`}
+      description="Description will go into a meta tag in <head />">
+      <header className={clsx('hero hero--primary', styles.heroBanner)}>
+        <div className="container">
+          <h1 className="hero__title">{siteConfig.title}</h1>
+          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <div className={styles.buttons}>
+            <Link
+              className={clsx(
+                'button button--outline button--secondary button--lg',
+                styles.getStarted,
               )}
-            />
-            <Container className="flex-fill pt-5">
-              <Row>
-                <Col xs={12} className="mb-3 border-bottom pb-3">
-                  <h1 className="mb-3">{title}</h1>
-                  <h2 className="h4 text-secondary">{description}</h2>
-                </Col>
-                <Col xs={12} className="mb-5" tag={Alert} color="light">
-                  Documentation for Availity Javascript SDK, React Components,
-                  UIKit, and Workflow Toolkit.
-                </Col>
-                <Card
-                  name="Getting Started"
-                  icon={<FaPlayCircle size="2em" />}
-                  className="bg-secondary"
-                  to="/availity-workflow"
-                  description="Get started with our toolkit for web application development."
-                />
-                <Card
-                  name="UI Kit"
-                  icon={<FaCss3 size="2em" />}
-                  className="bg-danger"
-                  to="/availity-uikit"
-                  description="Our custom CSS Kit that is built on top of Bootstrap 4."
-                />
-                <Card
-                  name="React Library"
-                  icon={<FaReact size="2em" />}
-                  className="bg-primary"
-                  to="/availity-react"
-                  description="React components built with Availity UI Kit and Reactstrap."
-                />
-                <Card
-                  name="Resources"
-                  icon={<FaJs size="2em" />}
-                  className="bg-success"
-                  to="/sdk-js"
-                  description="SDK containing different packages for interfacing with our systems."
-                />
-              </Row>
-            </Container>
-            <Footer />
-          </Layout>
-        );
-      }}
-    />
+              to={useBaseUrl('docs/')}>
+              Get Started
+            </Link>
+          </div>
+        </div>
+      </header>
+      <main>
+        {features && features.length > 0 && (
+          <section className={styles.features}>
+            <div className="container">
+              <div className="row">
+                {features.map((props, idx) => (
+                  <Feature key={idx} {...props} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+      </main>
+    </Layout>
   );
-};
+}
 
-IndexPage.propTypes = {
-  location: PropTypes.object
-};
-
-export default IndexPage;
+export default Home;

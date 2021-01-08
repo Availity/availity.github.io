@@ -2,16 +2,15 @@
 
 > Source Code for https://availity.github.io
 
+// TODO: Contributing
+// TODO: Theme
+
 ## Contributing
 
 ```bash
 $ yarn install
 $ yarn start
 ```
-
-// TODO: migrate circleci to github actions
-// TODO: node 14
-// TODO: Contributing ?
 
 ## Website
 

@@ -38,8 +38,7 @@ jobs:
         with:
           target_branch: master
           build_dir: build
-          commit_message: deployed docs [skip ci]
-          committer_name: ${{ secrets.GH_USER }}
-          committer_email: ${{ secrets.GH_EMAIL }}
+          commit_message: deployed docs
+          committer: ${{ secrets.GH_USER }} ${{ secrets.GH_EMAIL }}
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}

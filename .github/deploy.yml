@@ -34,10 +34,10 @@ jobs:
       - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
       - run: git config --global user.email ${{ secrets.GH_EMAIL }}
       - run: git config --global user.name ${{ secrets.GH_USER }}
-      - run: yarn deploy:pages
+      - run: yarn build
       - uses: crazy-max/ghaction-github-pages@v2
         with:
-          target_branch: gh-pages
+          target_branch: master
           build_dir: build
           commit_message: deployed docs [skip ci]
           committer_name: ${{ secrets.GH_USER }}

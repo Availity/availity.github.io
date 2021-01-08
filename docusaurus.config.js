@@ -56,7 +56,7 @@ module.exports = {
               target: '_self',
             },
             {
-              label: 'Github Repository',
+              label: 'GitHub Repository',
               href: 'https://github.com/availity/availity-react',
             },
           ],
@@ -70,7 +70,7 @@ module.exports = {
               target: '_self',
             },
             {
-              label: 'Github Repository',
+              label: 'GitHub Repository',
               href: 'https://github.com/availity/sdk-js',
             },
           ],
@@ -84,7 +84,7 @@ module.exports = {
               target: '_self',
             },
             {
-              label: 'Github Repository',
+              label: 'GitHub Repository',
               href: 'https://github.com/availity/availity-workflow',
             },
           ],

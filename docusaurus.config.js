@@ -37,7 +37,7 @@ module.exports = {
           position: 'right',
         },
         {
-          href: 'availity.github.io/availity-workflow',
+          href: 'https://availity.github.io/availity-workflow',
           target: '_self',
           label: 'Workflow',
           position: 'right',

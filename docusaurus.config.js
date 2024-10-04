@@ -141,4 +141,5 @@ module.exports = {
       },
     ],
   ],
+  plugins: [require.resolve('./esm-plugin.js')],
 };

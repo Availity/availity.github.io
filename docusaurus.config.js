@@ -26,19 +26,19 @@ module.exports = {
       },
       items: [
         {
-          href: 'https://availity.github.io/element',
+          to: 'https://availity.github.io/element',
           target: '_self',
           label: 'Element',
           position: 'right',
         },
         {
-          href: 'https://availity.github.io/sdk-js',
+          to: 'https://availity.github.io/sdk-js',
           target: '_self',
           label: 'SDK-JS',
           position: 'right',
         },
         {
-          href: 'https://availity.github.io/availity-workflow',
+          to: 'https://availity.github.io/availity-workflow',
           target: '_self',
           label: 'Workflow',
           position: 'right',
@@ -59,7 +59,7 @@ module.exports = {
           items: [
             {
               label: 'Documentation',
-              href: 'https://availity.github.io/element',
+              to: 'https://availity.github.io/element',
               target: '_self',
             },
             {
@@ -73,7 +73,7 @@ module.exports = {
           items: [
             {
               label: 'Documentation',
-              href: 'https://availity.github.io/sdk-js',
+              to: 'https://availity.github.io/sdk-js',
               target: '_self',
             },
             {
@@ -87,7 +87,7 @@ module.exports = {
           items: [
             {
               label: 'Documentation',
-              href: 'https://availity.github.io/availity-workflow',
+              to: 'https://availity.github.io/availity-workflow',
               target: '_self',
             },
             {
@@ -101,7 +101,7 @@ module.exports = {
           items: [
             {
               label: 'Documentation',
-              href: 'https://availity.github.io/availity-react',
+              to: 'https://availity.github.io/availity-react',
               target: '_self',
             },
             {
@@ -114,8 +114,9 @@ module.exports = {
           title: 'Legacy Availity UIKit',
           items: [
             {
-              label: 'Documentation',
+              to: 'Documentation',
               href: 'https://availity.github.io/availity-uikit',
+              target: '_self',
             },
             {
               label: 'GitHub Repository',

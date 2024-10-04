@@ -114,8 +114,8 @@ module.exports = {
           title: 'Legacy Availity UIKit',
           items: [
             {
-              to: 'Documentation',
-              href: 'https://availity.github.io/availity-uikit',
+              label: 'Documentation',
+              to: 'https://availity.github.io/availity-uikit',
               target: '_self',
             },
             {

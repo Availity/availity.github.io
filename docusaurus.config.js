@@ -26,8 +26,7 @@ module.exports = {
       },
       items: [
         {
-          to: 'https://availity.github.io/element',
-          target: '_self',
+          href: 'https://zeroheight.com/2e36e50c7/p/77f9e0-components',
           label: 'Element',
           position: 'right',
         },
@@ -41,6 +40,12 @@ module.exports = {
           to: 'https://availity.github.io/availity-workflow',
           target: '_self',
           label: 'Workflow',
+          position: 'right',
+        },
+        {
+          to: 'https://availity.github.io/availity-react',
+          target: '_self',
+          label: 'React',
           position: 'right',
         },
         {
@@ -59,8 +64,7 @@ module.exports = {
           items: [
             {
               label: 'Documentation',
-              to: 'https://availity.github.io/element',
-              target: '_self',
+              href: 'https://zeroheight.com/2e36e50c7/p/77f9e0-components',
             },
             {
               label: 'GitHub Repository',

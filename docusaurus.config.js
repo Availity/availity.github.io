@@ -11,6 +11,7 @@ module.exports = {
   themeConfig: {
     colorMode: {
       defaultMode: 'light',
+      disableSwitch: true,
       // Should we use the prefers-color-scheme media-query,
       // using user system preferences, instead of the hardcoded defaultMode
       respectPrefersColorScheme: true,
@@ -25,9 +26,9 @@ module.exports = {
       },
       items: [
         {
-          href: 'https://availity.github.io/availity-react',
+          href: 'https://availity.github.io/element',
           target: '_self',
-          label: 'React',
+          label: 'Element',
           position: 'right',
         },
         {
@@ -54,16 +55,16 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Availity React',
+          title: 'Element Design System',
           items: [
             {
               label: 'Documentation',
-              href: 'https://availity.github.io/availity-react',
+              href: 'https://availity.github.io/element',
               target: '_self',
             },
             {
               label: 'GitHub Repository',
-              href: 'https://github.com/availity/availity-react',
+              href: 'https://github.com/Availity/element',
             },
           ],
         },
@@ -92,6 +93,33 @@ module.exports = {
             {
               label: 'GitHub Repository',
               href: 'https://github.com/availity/availity-workflow',
+            },
+          ],
+        },
+        {
+          title: 'Availity React',
+          items: [
+            {
+              label: 'Documentation',
+              href: 'https://availity.github.io/availity-react',
+              target: '_self',
+            },
+            {
+              label: 'GitHub Repository',
+              href: 'https://github.com/availity/availity-react',
+            },
+          ],
+        },
+        {
+          title: 'Legacy Availity UIKit',
+          items: [
+            {
+              label: 'Documentation',
+              href: 'https://availity.github.io/availity-uikit',
+            },
+            {
+              label: 'GitHub Repository',
+              href: 'https://github.com/Availity/availity-uikit',
             },
           ],
         },

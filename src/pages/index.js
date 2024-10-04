@@ -1,9 +1,12 @@
 import React from 'react';
-import { FaReact, FaPlayCircle, FaCss3, FaJs } from 'react-icons/fa';
-import clsx from 'clsx';
+import { FaReact, FaPlayCircle, FaJs, FaCss3 } from 'react-icons/fa';
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { ThemeProvider } from '@availity/theme-provider';
+import { Card, CardActionArea, CardHeader, CardContent } from '@availity/mui-card';
+import { Grid, Container } from '@availity/mui-layout';
+import { Typography } from '@availity/mui-typography';
+import { Alert } from '@availity/mui-alert';
 import styles from './styles.module.css';
 
 const features = [
@@ -16,11 +19,11 @@ const features = [
     target: '_self',
   },
   {
-    title: 'React Components',
+    title: 'Element',
     icon: FaReact,
     // linkStyle: 'reactIcon',
-    description: <>React components built with the Availity UI Kit and Reactstrap</>,
-    href: 'https://availity.github.io/availity-react',
+    description: <>React components built with Material UI using Availity&apos;s Element Design System.</>,
+    href: 'https://availity.github.io/element',
     target: '_self',
   },
   {
@@ -32,10 +35,23 @@ const features = [
     target: '_self',
   },
   {
-    title: 'Availity UI Kit',
+    title: 'Availity React',
+    icon: FaReact,
+    // linkStyle: 'reactIcon',
+    description: <>React components and hooks. React components are built with the Availity UI Kit and Reactstrap 8.</>,
+    href: 'https://availity.github.io/availity-react',
+    target: '_self',
+  },
+  {
+    title: 'Legacy Availity UI Kit',
     icon: FaCss3,
     // linkStyle: 'reactIcon', styles[linkStyle] || styles.featureLink for <a />
-    description: <>Our custom CSS kit that is built on top of Bootstrap 4</>,
+    description: (
+      <>
+        Our custom CSS kit that is built on top of Bootstrap 4.{' '}
+        <Alert severity="error">This library will be retired 01/01/26</Alert>
+      </>
+    ),
     href: 'https://availity.github.io/availity-uikit',
     target: '_blank', // uikit does not link back to docs
   },
@@ -43,17 +59,19 @@ const features = [
 
 function Feature({ title, description, icon: Icon, href, target }) {
   return (
-    <div className={clsx('col col--6', styles.feature)}>
-      {Icon && (
-        <Link href={href} target={target} aria-label={title}>
-          <div className="text--center">
-            <Icon className={styles.featureImage} alt={title} />
-          </div>
-        </Link>
-      )}
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
+    <Card sx={{ marginBottom: 2, marginRight: 2 }}>
+      <CardActionArea href={href} target={target} sx={{ height: '100%' }}>
+        <CardHeader
+          title={
+            <Grid container alignItems="center">
+              <Icon className={styles.featureImage} alt={title} />
+              <span>{title}</span>
+            </Grid>
+          }
+        />
+        {Icon && <CardContent>{description}</CardContent>}
+      </CardActionArea>
+    </Card>
   );
 }
 
@@ -61,39 +79,30 @@ function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description="Homepage for Availity's Workflow, React, SDK-JS, and UI Kit documentation"
-    >
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
-        <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={clsx('button button--outline button--secondary button--lg', styles.getStarted)}
-              href="https://availity.github.io/availity-workflow"
-              target="_self"
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
-      </header>
-      <main>
-        {features?.length > 0 && (
-          <section className={styles.features}>
-            <div className="container">
-              <div className="row">
+    <ThemeProvider>
+      <Layout
+        title={`${siteConfig.title}`}
+        description="Homepage for Availity's Workflow, React, SDK-JS, and UI Kit documentation"
+      >
+        <Container>
+          <header>
+            <Typography variant="h1" marginTop={2}>
+              {siteConfig.title}
+            </Typography>
+            <Typography variant="subtitle1">{siteConfig.tagline}</Typography>
+          </header>
+          <main>
+            {features?.length > 0 && (
+              <Grid margin={2} container marginTop={4}>
                 {features.map((props, idx) => (
                   <Feature key={idx} {...props} />
                 ))}
-              </div>
-            </div>
-          </section>
-        )}
-      </main>
-    </Layout>
+              </Grid>
+            )}
+          </main>
+        </Container>
+      </Layout>
+    </ThemeProvider>
   );
 }
 

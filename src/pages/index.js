@@ -54,7 +54,7 @@ const features = [
     description: (
       <>
         Our custom CSS kit that is built on top of Bootstrap 4.{' '}
-        <Alert severity="error">TThis library will be replaced by Element.</Alert>
+        <Alert severity="error">This library will be replaced by Element.</Alert>
       </>
     ),
     href: 'https://availity.github.io/availity-uikit',

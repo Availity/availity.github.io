@@ -101,7 +101,7 @@ module.exports = {
           ],
         },
         {
-          title: 'Availity React',
+          title: 'Legacy Availity React',
           items: [
             {
               label: 'Documentation',
